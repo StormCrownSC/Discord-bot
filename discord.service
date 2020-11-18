@@ -1,0 +1,14 @@
+[Unit]
+Description=Discord - Discord bot
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node bot.js
+ExecReload=/usr/bin/node bot.js
+WorkingDirectory=/opt/discord/
+KillMode=process
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
